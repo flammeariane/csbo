@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','PagesController@home');
+Route::get('/','Auth\loginController@showLoginFrom');
 
 Route::get('/cal','PagesController@cal');
 
