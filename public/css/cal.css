@@ -1,0 +1,14 @@
+table, tr, td {
+  border: 1px solid black;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+td {
+  height: 30px;
+  width: 40px;
+}
+/*# sourceMappingURL=cal.css.map */
