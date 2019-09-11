@@ -11,6 +11,10 @@
 |
 */
 
+
+Route::auth();
+//Route::get('/home', 'HomeController@index');
+
 Route::get('/','PagesController@home');
 
 Route::get('/cal','PagesController@cal');
@@ -20,12 +24,16 @@ Route::get('/calPop','PagesController@calPop');
 Route::get('/delEvent','PagesController@delEvent');
 
 Route::get('/account','PagesController@account');
-
+ 
 Route::get('/accountEdit','PagesController@accountEdit');
 
 Route::get('/myEvent','PagesController@myEvent');
 
 Route::get('/myWear','PagesController@myWear');
+
+Route::get('/accueil','PagesController@accueil');
+
+Route::get('/event','PagesController@event');
 
 
 
@@ -66,3 +74,11 @@ Route::get('/myWear','PagesController@myWear');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

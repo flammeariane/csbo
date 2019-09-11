@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home Page</title>
-</head>
-<body>
-    <p>Bienvenue sur votre espace perso </p>
+@extends('layouts.app')
 
-    <p> <a href="cal">calendar</a></p>
-    <p><a href="calPop">calendarPOP</a></p> 
-   <p><a href="delEvent">deletingEvent</a></p> 
-   <p><a href="account">myAccount</a></p> 
-    <p><a href="accountEdit">myaccountEdit</a></p> 
-   <p><a href="myEvent">myEvent</a></p> 
-   <p><a href="myWear">myWear</a></p> 
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
 
-   <ul>
-       {{-- Test pour lister les éléments de la DB --}}
-       @foreach ($data as $item)
-           <li>{{ $item->titre }}</li>
-       @endforeach
-   </ul>
-    
-</body>
-</html>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
