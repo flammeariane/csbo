@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Evenement;
 use Illuminate\Http\Request;
 
 class pagesController extends Controller
 {
     public function home(){
-        return view('home');
+        $evenements = Evenement::all();
+
+        return view('home', [
+            'data'=>$evenements
+        ]);
     }
 
     public function cal(){

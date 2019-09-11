@@ -16,6 +16,13 @@
     <p><a href="accountEdit">myaccountEdit</a></p> 
    <p><a href="myEvent">myEvent</a></p> 
    <p><a href="myWear">myWear</a></p> 
+
+   <ul>
+       {{-- Test pour lister les éléments de la DB --}}
+       @foreach ($data as $item)
+           <li>{{ $item->titre }}</li>
+       @endforeach
+   </ul>
     
 </body>
 </html>
