@@ -1,11 +1,13 @@
 @extends('layout')
 
-    @section('title','Mon compte')
+
+@section('title', 'Calendrier')
+    
+   
 
 @section('content')
 
-<h1>My account</h1>
+<h1>My event</h1>
+
 <a href="/accueil">Back home</a>
 @endsection
-
- 
