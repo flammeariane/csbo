@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+
 use App\CategorieEvenement;
 use App\Evenement;
 use Illuminate\Http\Request;
 
 class pagesController extends Controller
-{
+{   
+    public function accueil(){
+        return view('accueil');
+    }
     public function home(){
         return view('home');
     }

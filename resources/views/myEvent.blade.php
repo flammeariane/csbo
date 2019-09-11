@@ -1,7 +1,7 @@
 @extends('layout')
 
 
-@section('title', 'MyEvent')
+@section('title', 'Mes Evenements')
     
    
 
@@ -9,6 +9,6 @@
 
 <h1>My event</h1>
 
-
+<a href="/accueil">Back home</a>
 @endsection
 

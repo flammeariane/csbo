@@ -1,7 +1,7 @@
 @extends('layout')
 
 
-@section('title', 'Event')
+@section('title', 'Calendrier')
     
    
 
@@ -15,4 +15,5 @@
 	@endforeach
 </ul>
 
+<a href="/accueil">Back home</a>
 @endsection
