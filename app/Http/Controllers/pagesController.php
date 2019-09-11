@@ -9,11 +9,7 @@ use Illuminate\Http\Request;
 class pagesController extends Controller
 {
     public function home(){
-        $evenements = Evenement::all();
-
-        return view('home', [
-            'data'=>$evenements
-        ]);
+        return view('home');
     }
 
     public function cal(){
@@ -35,6 +31,14 @@ class pagesController extends Controller
     public function accountEdit()
     {
         return view ('accountEdit');
+    }
+
+    public function event(){
+        $evenements = Evenement::all();
+
+        return view ('event', [
+            'data'=>$evenements
+        ]);
     }
 
     public function myEvent(){

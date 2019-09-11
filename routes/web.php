@@ -23,6 +23,8 @@ Route::get('/account','PagesController@account');
 
 Route::get('/accountEdit','PagesController@accountEdit');
 
+Route::get('/event', 'PagesController@event');
+
 Route::get('/myEvent','PagesController@myEvent');
 
 Route::get('/myWear','PagesController@myWear');
