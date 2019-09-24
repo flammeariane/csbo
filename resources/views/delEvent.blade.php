@@ -1,30 +1,37 @@
 @extends('layout')
 
-@section('title','Delete Event')
+@section('title', 'Delete Event')
 
 @section('content')
 
-<h1>Evénements</h1>
-
-<section class="main">
-    <div class="row">
-        <div class="col-8 mt-4- pl-5">
-            <h4>essai</h4>
-        </div>
+<section class="container">
+    <div class="evenement">
+        <h1>{{__('Evénements')}}</h1>
+            <div class="row justify-content-center">
+                <div class="nom-evenement">
+                    <input type="text">
+                </div>
+            </div>
     </div>
-</section>
 
-<section class="info">
-    <div id="title">
-        <h1>Motif</h1>
+    <div id="card" class="card">
+    <h1>{{__('Motif')}}</h1>
+        <div class="card-body">
+            <div class="Motif">
+                <input type="textearea">
+            </div>
     </div>
-    <input type="textarea" class="">
-
-    <div class="row">
-        
+    </div>
+    <div class="bouton-envoyer\ ">
         <button class="btn btn-outline-danger" type="submit" value="envoyer">Envoyer</button>
-        <button class="btn btn-outline-danger" type="bouton" value="retour">Retour</button>
+    </div>
+
+    <div class="bouton-retour">
+
     </div>
 
 </section>
+
+
+
 @endsection

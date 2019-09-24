@@ -48,3 +48,15 @@ input#password{
 a.btn.btn-link{
     margin:auto;
 }
+
+section.container{
+    margin-top:2%;
+}
+
+section.motif{
+    margin-top:5%;
+}
+
+#card{
+    background-color: lightgray;
+}
