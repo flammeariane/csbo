@@ -33,7 +33,7 @@ button.btn.btn-danger {
 }
 
 .card{
-    margin-top:20%;
+    margin-top:10%;
 }
 
 input#email{
@@ -49,14 +49,15 @@ a.btn.btn-link{
     margin:auto;
 }
 
-section.container{
-    margin-top:2%;
-}
-
-section.motif{
+div.evenement{
     margin-top:5%;
 }
 
-#card{
+
+#motif.card{
     background-color: lightgray;
+}
+textarea{
+    background-color: lightgray;
+    width:100%;
 }
