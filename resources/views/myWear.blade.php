@@ -5,7 +5,7 @@
 
 @section('content')
 
-<section class="tenues">
+
 <div class="container">
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -33,10 +33,10 @@
             <span class="badge badge-secondary badge-pill">1</span>
         </li>
     </ul>
+
+
+<a href="/"><span class="btn btn-outline-danger ml-5">Commander</span></a>
+<a href="/"><span class="btn btn-outline-danger ml-5">Retour</span></a>
 </div>
-<div class="commande">
-<a href="/"><span class="btn btn-outline-danger">Commander</span></a>
-<a href="/"><span class="btn btn-outline-danger">Retour</span></a>
-</div>
-</section>
+
 @endsection
