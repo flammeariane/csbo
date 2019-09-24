@@ -6,8 +6,14 @@ header {
     background-color: lightgray;
 }
 
+h1{
+    text-align:center;
+}
+
 h2 {
     color:white;
+    font-weight:bolder;
+    text-align:center;
 }
 
 h3 {

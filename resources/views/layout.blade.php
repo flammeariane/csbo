@@ -13,7 +13,7 @@
 <header>
     <section class="container">
             <div class="row">
-                    <div class="col-8 mt-4 pl-5"><h4>@yield('title')</h4></div>
+                    <div class="col-8 mt-4 pl-5"><h2>@yield('title')</h2></div>
                     <div class="col-4"><img src="{{ asset('logo2.png') }}" alt="logo"></div>
             </div>
     </section>
