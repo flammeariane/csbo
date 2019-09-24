@@ -34,3 +34,21 @@ h5 {
     margin-top:20%;
     
     }
+.list-group {
+
+border :1px solid red;
+border-radius: 5px;
+margin-top: 10%;
+/*margin-left: 10%;
+margin-right: 10%;
+}
+
+.commande {
+margin-left: 15%;
+margin-right: 10%;
+}*/
+
+.tenues {
+    margin-left: 10%;
+    margin-right: 10%;
+}
