@@ -5,18 +5,17 @@
 @section('content')
 
 <div class="container">
-
     <div class="evenement">
-        <h1>{{__('Evénements')}}</h1>
+    <h1>{{__('Evénements')}}</h1>
             <div class="row justify-content-center">
-                <div class="nom-evenement">
+                <!-- <div class="nom-evenement">
                     <input type="text">
-                </div>
+                </div> -->
             </div>
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div id="motif" class="card">
                 <h1>{{ __('Motif') }}</h1>
 
