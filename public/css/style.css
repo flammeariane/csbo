@@ -57,7 +57,16 @@ div.evenement{
 #motif.card{
     background-color: lightgray;
 }
+
 textarea{
     background-color: lightgray;
     width:100%;
+}
+
+button.btn.btn-outline-danger{
+    margin-top:5%;
+}
+
+button.btn.btn-outline-danger a{
+    color:
 }
