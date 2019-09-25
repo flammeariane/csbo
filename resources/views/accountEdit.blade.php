@@ -28,7 +28,8 @@
     </div>
     <div class="form-group">
         <label for="dateNaissanceLabel">Date de naissance</label>
-        <input type="date" class="form-control" id="inputNaissance" value="12/08/1971" placeholder="Entrez votre date de naissance">
+        <input type="date" class="form-control" id="inputNaissance" value="1971-08-12" placeholder="Entrez votre date de naissance">
+        <!-- la value doit être dans ce format: yyyy-mm--dd sinon ça marche pas! -->
     </div>
     <div class="form-group">
         <label for="adressLabel">Adresse</label>
