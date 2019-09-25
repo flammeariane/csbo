@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,EAAE,EAAE,EAAE,EAAE,CAAA;EACZ,MAAM,EAAE,eAAe;CACvB;;AAED,AAAA,KAAK,CAAA;EACJ,YAAY,EAAE,KAAK;EACnB,eAAe,EAAE,QAAQ;CACzB;;AAED,AAAA,EAAE,CAAA;EACD,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACX",
-    "sources": [
-        "../../resources/sass/cal.scss"
-    ],
-    "names": [],
-    "file": "cal.css"
-}
