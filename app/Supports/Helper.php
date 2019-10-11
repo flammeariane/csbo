@@ -1,13 +1,15 @@
 <?php
 
 /**
- * An example of a custom function.
+ * Return authenticated user.
  *
- * @return boolean
+ * @return void
 */
-if (!function_exists('myCustomFunction')) {
-	function myCustomFunction(): bool
+if (!function_exists('user')) {
+	function user()
 	{
-		return true;
+		if (!auth()->check()) return;
+
+		return auth()->user();
 	}
 }
