@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        @alert()
+                        @alert(['type' => 'success'])
                             {{ session('status') }}
                         @endalert
                     @endif

@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Evenement;
+use Illuminate\Http\Request;
+use MaddHatter\LaravelFullcalendar\Facades\Calendar;
+
+class EvenementController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $events = Evenement::all();
+        $calendar = Calendar::addEvents($events);
+
+        return view('pages.evenement', compact('calendar'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(int $id)
+    {
+        return Evenement::findOrFail($id);
+    }
+}

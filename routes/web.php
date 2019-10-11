@@ -11,7 +11,8 @@
 |
 */
 
-Auth::routes(['register' => false, 'verify' => false, 'reset' => false]);
+Auth::routes(['register' => false, 'verify' => false, 'reset' => false, 'remember' => false]);
 
 Route::redirect('/', url('login'));
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/events', 'EvenementController')->only(['index', 'show']);
