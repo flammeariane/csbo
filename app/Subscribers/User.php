@@ -6,11 +6,8 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Lockout;
-use Illuminate\Auth\Events\Verified;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Events\Attempting;
 use Illuminate\Auth\Events\Authenticated;
-use Illuminate\Auth\Events\PasswordReset;
 
 class User
 {
@@ -28,8 +25,6 @@ class User
 
     public function onFailed($event) {}
     public function onLockout($event) {}
-    public function onVerified($event) {}
-    public function onRegistered($event) {}
     public function onAttempting($event) {}
 
     public function onAuthenticated($event)
@@ -39,8 +34,6 @@ class User
             auth()->logout();
         }
     }
-
-    public function onPasswordReset($event) {}
 
     /**
      * Register the listeners for the subscriber.
@@ -55,11 +48,8 @@ class User
             Logout::class => "{$class}@onLogout",
             Failed::class => "{$class}@onFailed",
             Lockout::class => "{$class}@onLockout",
-            Verified::class => "{$class}@onVerified",
-            Registered::class => "{$class}@onRegistered",
             Attempting::class => "{$class}@onAttempting",
-            Authenticated::class => "{$class}@onAuthenticated",
-            PasswordReset::class => "{$class}@onPasswordReset"
+            Authenticated::class => "{$class}@onAuthenticated"
         ];
 
         foreach ($events as $event => $listener) {
