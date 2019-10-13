@@ -28,7 +28,7 @@ class EvenementController extends Controller
         $events = Evenement::all();
         $calendar = Calendar::addEvents($events);
 
-        return view('pages.evenement', compact('calendar'));
+        return view('pages.evenements.index', compact('calendar'));
     }
 
     /**
@@ -39,6 +39,8 @@ class EvenementController extends Controller
      */
     public function show(int $id)
     {
-        return Evenement::findOrFail($id);
+        $event = Evenement::findOrFail($id);
+
+        return view('pages.evenements.show', compact('event'));
     }
 }
