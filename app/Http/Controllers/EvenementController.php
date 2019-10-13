@@ -26,7 +26,14 @@ class EvenementController extends Controller
     public function index()
     {
         $events = Evenement::all();
-        $calendar = Calendar::addEvents($events);
+        $calendar = Calendar::addEvents($events)->setOptions([
+            'locale' => config('app.locale'),
+            'views' => [
+                'month' => [
+                    'timeFormat' => (config('app.locale') === 'fr' ? 'H:mm' : null)
+                ]
+            ]
+        ]);
 
         return view('pages.evenements.index', compact('calendar'));
     }
