@@ -4,7 +4,6 @@ namespace App;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Builder;
 use MaddHatter\LaravelFullcalendar\Event;
 
 class Evenement extends Model implements Event
@@ -22,6 +21,20 @@ class Evenement extends Model implements Event
      * @var bool
      */
     public $timestamps = true;
+
+    /**
+     * The name of the "created at" column.
+     *
+     * @var string
+     */
+    const CREATED_AT = 'dateCreation';
+
+    /**
+     * The name of the "updated at" column.
+     *
+     * @var string
+     */
+    const UPDATED_AT = 'dateUpdate';
 
     /**
      * The attributes that are mass assignable.
@@ -64,7 +77,9 @@ class Evenement extends Model implements Event
      */
     public function isAllDay()
     {
-        return true;
+        if ($this->dateDebut->diffInHours($this->dateFin) >= 8) return true;
+
+        return false;
     }
 
     /**
