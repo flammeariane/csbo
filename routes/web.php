@@ -11,7 +11,7 @@
 |
 */
 
-Auth::routes(['register' => false, 'verify' => false, 'reset' => false, 'remember' => false]);
+Auth::routes(['register' => false, 'verify' => false, 'reset' => false]);
 
 Route::redirect('/', url('login'));
 Route::get('/home', 'HomeController@index')->name('home');
