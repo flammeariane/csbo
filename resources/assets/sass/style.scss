@@ -17,3 +17,15 @@ header {
     transform: translate(-50%, -50%);
     width: 100%;
 }
+
+.btn-navigation {
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+a.disabled {
+    pointer-events: none !important;
+    cursor: default !important;
+}
