@@ -113,6 +113,8 @@ class User extends Authenticatable
     public function events()
     {
         $events = Evenement::all();
+        $myEvents = [];
+        
         foreach ($events as $event)
         {
             if ($event->participants()->some('id', '=', user()->id)) {
