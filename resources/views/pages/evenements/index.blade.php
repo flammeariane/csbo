@@ -28,10 +28,10 @@
         <div class="col-12">
             <ul class="list-unstyled mt-50">
                 <li class="mb-2">
-                    <a class="btn btn-block border-primary" href="{{ route('user.events') }}">{{ __('My events') }}</a>
+                    <a class="btn btn-navigation btn-block border-primary" href="{{ route('user.events') }}">{{ __('My events') }}</a>
                 </li>
                 <li class="mb-2">
-                    <a class="btn btn-block border-primary" href="{{ route('home') }}">{{ __('Home') }}</a>
+                    <a class="btn btn-navigation btn-block border-primary" href="{{ route('home') }}">{{ __('Home') }}</a>
                 </li>
             </ul>
         </div>

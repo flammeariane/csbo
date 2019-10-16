@@ -12,9 +12,6 @@
                     <div class="float-left">
                         <a href="{{ route('events.index') }}" class="btn btn-primary">{{ __('Return back') }}</a>
                     </div>
-                    <div class="float-right">
-                        <a href="{{ route('events.index') }}" class="btn btn-success">{{ __('Register for this event') }}</a>
-                    </div>
                 </div>
             </div>
         </div>

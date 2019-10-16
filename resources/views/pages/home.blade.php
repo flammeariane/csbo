@@ -17,16 +17,16 @@
         <div class="col-10">
             <ul class="list-unstyled">
                 <li class="mb-2">
-                    <a class="btn btn-block border-primary" href="{{ route('events.index') }}">{{ __('Calendar of events') }}</a>
+                    <a class="btn btn-navigation btn-block border-primary" href="{{ route('events.index') }}">{{ __('Calendar of events') }}</a>
                 </li>
                 <li class="mb-2">
-                    <a class="btn btn-block border-primary" href="{{ route('user.events') }}">{{ __('My events') }}</a>
+                    <a class="btn btn-navigation btn-block border-primary" href="{{ route('user.events') }}">{{ __('My events') }}</a>
                 </li>
                 <li class="mb-2">
-                    <a class="btn btn-block border-primary" href="{{ route('user.outfits') }}">{{ __('My outfits') }}</a>
+                    <a class="btn btn-navigation btn-block border-primary disabled" href="{{ route('user.outfits') }}">{{ __('My outfits') }}</a>
                 </li>
                 <li>
-                    <a class="btn btn-block border-primary" href="{{ route('user.account') }}">{{ __('My account') }}</a>
+                    <a class="btn btn-navigation btn-block border-primary disabled" href="{{ route('user.account') }}">{{ __('My account') }}</a>
                 </li>
             </ul>
         </div>
@@ -36,7 +36,7 @@
         <div class="col-10">
             <ul class="list-unstyled mt-50">
                 <li class="mb-2">
-                    <a class="btn btn-block border-primary" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <a class="btn btn-navigation btn-block border-primary" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
