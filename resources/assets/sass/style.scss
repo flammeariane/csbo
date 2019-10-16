@@ -1,8 +1,19 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
 @import 'variables';
 
-// Bootstrap
+/** VENDORS **/
 @import '~bootstrap/scss/bootstrap';
+
+/** CUSTOM'S **/
+
+header {
+    background-color: $gray-400 !important;
+}
+
+.centered-on-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -102,5 +103,35 @@ class User extends Authenticatable
         }
 
         return false;
+    }
+
+    /**
+     * This function is used to return all events in which the user participates.
+     *
+     * @return void
+     */
+    public function events()
+    {
+        $events = Evenement::all();
+        foreach ($events as $event)
+        {
+            if ($event->participants()->some('id', '=', user()->id)) {
+                $myEvents[] = $event;
+            }
+        }
+
+        return $myEvents;
+    }
+
+    /**
+     * This function is used to return all outfits attribued to user.
+     *
+     * @return void
+     */
+    public function outfits()
+    {
+        return collect(DB::table('attribution_tenue')->where('user_id', $this->id)->get()->map(function ($outfit) {
+            return $outfit;
+        }));
     }
 }

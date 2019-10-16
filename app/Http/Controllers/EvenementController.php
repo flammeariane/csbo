@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Evenement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use MaddHatter\LaravelFullcalendar\Facades\Calendar;
 
 class EvenementController extends Controller

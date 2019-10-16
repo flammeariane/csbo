@@ -1,23 +1,51 @@
-@extends('layouts.wrapper')
+@extends('layouts.wrapper', [ 'title' => __('Home') ])
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        @alert(['type' => 'success'])
-                            {{ session('status') }}
-                        @endalert
-                    @endif
-
-                    You are logged in!
-                </div>
+    @if (session('status'))
+        <div class="row">
+            <div class="col-12">
+                @alert(['type' => 'success'])
+                    {{ session('status') }}
+                @endalert
             </div>
         </div>
+    @endif
+
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <ul class="list-unstyled">
+                <li class="mb-2">
+                    <a class="btn btn-block border-primary" href="{{ route('events.index') }}">{{ __('Calendar of events') }}</a>
+                </li>
+                <li class="mb-2">
+                    <a class="btn btn-block border-primary" href="{{ route('users.events') }}">{{ __('My events') }}</a>
+                </li>
+                <li class="mb-2">
+                    <a class="btn btn-block border-primary" href="{{ route('events.index') }}">{{ __('My outfits') }}</a>
+                </li>
+                <li>
+                    <a class="btn btn-block border-primary" href="{{ route('events.index') }}">{{ __('My account') }}</a>
+                </li>
+            </ul>
+        </div>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <ul class="list-unstyled mt-50">
+                <li class="mb-2">
+                    <a class="btn btn-block border-primary" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 @endsection
