@@ -135,8 +135,8 @@ class Evenement extends Model implements Event
      */
     public function participants()
     {        
-        return collect(DB::table('participation_evenement')->where('evenement_id', $this->id)->get()->map(function ($participant) {
+        return DB::table('participation_evenement')->where('evenement_id', $this->id)->get()->map(function ($participant) {
             return User::where('id', $participant->user_id)->first();
-        }));
+        });
     }
 }
