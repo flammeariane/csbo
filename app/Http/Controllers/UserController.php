@@ -19,5 +19,5 @@ class UserController extends Controller
         return view('pages.users.events', compact('events'));
     }
 
-    public function profil() {}
+    public function account() {}
 }

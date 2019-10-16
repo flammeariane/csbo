@@ -20,13 +20,13 @@
                     <a class="btn btn-block border-primary" href="{{ route('events.index') }}">{{ __('Calendar of events') }}</a>
                 </li>
                 <li class="mb-2">
-                    <a class="btn btn-block border-primary" href="{{ route('users.events') }}">{{ __('My events') }}</a>
+                    <a class="btn btn-block border-primary" href="{{ route('user.events') }}">{{ __('My events') }}</a>
                 </li>
                 <li class="mb-2">
-                    <a class="btn btn-block border-primary" href="{{ route('events.index') }}">{{ __('My outfits') }}</a>
+                    <a class="btn btn-block border-primary" href="{{ route('user.outfits') }}">{{ __('My outfits') }}</a>
                 </li>
                 <li>
-                    <a class="btn btn-block border-primary" href="{{ route('events.index') }}">{{ __('My account') }}</a>
+                    <a class="btn btn-block border-primary" href="{{ route('user.account') }}">{{ __('My account') }}</a>
                 </li>
             </ul>
         </div>
