@@ -1,4 +1,4 @@
-@extends('layouts.wrapper', [ 'title' => 'CSBO' ])
+@extends('layouts.wrapper', [ 'title' => __('Login') ])
 
 @section('content')
 <div class="container">
