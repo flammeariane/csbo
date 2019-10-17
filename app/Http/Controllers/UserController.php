@@ -6,7 +6,15 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function outfits() {}
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
     /**
      * Display only my events.
@@ -16,8 +24,21 @@ class UserController extends Controller
     public function events() 
     {
         $events = user()->events();
+
         return view('pages.users.events', compact('events'));
     }
 
-    public function account() {}
+    /**
+     * Display all of my outfits
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function outfits() 
+    {
+        $outfits = user()->outfits();
+
+        return view('pages.users.outfits', compact('outfits'));
+    }
+
+    public function account(Request $request) {}
 }
