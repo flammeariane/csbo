@@ -128,8 +128,6 @@ class User extends Authenticatable
      */
     public function outfits()
     {
-        return collect(DB::table('attribution_tenue')->where('user_id', $this->id)->get()->map(function ($outfit) {
-            return $outfit;
-        }));
+        return Outfit::where('user_id', $this->id)->get();
     }
 }
