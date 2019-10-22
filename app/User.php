@@ -47,7 +47,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'dateNaissance' => 'datetime'
+    ];
 
     /**
      * Set the user's password.

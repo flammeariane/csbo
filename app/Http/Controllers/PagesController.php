@@ -39,4 +39,16 @@ class PagesController extends Controller
 
         return view('pages.outfits', compact('outfits'));
     }
+
+    /**
+     * Display my account
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function me() 
+    {
+        $user = user();
+
+        return view('pages.account', compact('user'));
+    }
 }

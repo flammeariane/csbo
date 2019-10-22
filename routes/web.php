@@ -18,6 +18,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/events', 'EvenementController')->only(['index', 'show']);
 
 Route::group(['prefix' => 'me'], function () {
+    Route::get('/', 'PagesController@me')->name('pages.me');
     Route::get('events', 'PagesController@events')->name('pages.events');
     Route::get('outfits', 'PagesController@outfits')->name('pages.outfits');
 });

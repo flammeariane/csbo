@@ -52,5 +52,11 @@
   "My outfits": "Mes tenues",
   "My account": "Mon compte",
   "You do not participate in any events": "Vous ne participez à aucun événement",
-  "You have no assigned outfits": "Vous n'avez pas de tenue assignée"
+  "You have no assigned outfits": "Vous n'avez pas de tenue assignée",
+  "Firstname": "Prénom",
+  "Phone": "Téléphone",
+  "Birthday": "Date de naissance",
+  "Address": "Addresse",
+  "Registration number": "N° de matricule",
+  "Undefined": "/"
 }

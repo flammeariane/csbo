@@ -26,7 +26,7 @@
                     <a class="btn btn-navigation btn-block border-primary" href="{{ route('pages.outfits') }}">{{ __('My outfits') }}</a>
                 </li>
                 <li>
-                    <a class="btn btn-navigation btn-block border-primary disabled" href="">{{ __('My account') }}</a>
+                    <a class="btn btn-navigation btn-block border-primary" href="{{ route('pages.me') }}">{{ __('My account') }}</a>
                 </li>
             </ul>
         </div>
