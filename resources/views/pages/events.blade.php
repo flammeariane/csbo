@@ -6,16 +6,13 @@
     <div class="row justify-content-center">
         <div class="col-12">
             @forelse($events as $event)
-                <div class="card">
+                <div class="card mb-3">
                     <div class="card-body">
                        <b> {{ $event->titre }} </b><br>
                         {{ $event->lieu}} <br>
                         {{ "Début : ".$event->dateDebut ->format('d/m/y H:i')}}<br>
                         {{ "Fin : ".$event->dateFin->format('d/m/y H:i')}}
-                       <button type="button" class="btn btn border-primary"> <a href="mailto:demo@example.com?subject=Annulation - {{ $event->titre }} ({{ $event->dateDebut->format('d/m/Y H:i') }}) - {{ auth()->user()->fullName }}&body=Veuillez renseigner la raison de votre annulation..">{{ __('Cancel') }}</a>
-
-                      
-
+                       <a class="btn btn-navigation btn border-primary" href="mailto:{{ env('EVENT_CANCEL_MAIL_TO', null) }}?subject=Annulation - {{ $event->titre }} ({{ $event->dateDebut->format('d/m/Y H:i') }}) - {{ auth()->user()->fullName }}&body=Veuillez renseigner la raison de votre annulation..">{{ __('Cancel') }}</a>
                     </div>
                 </div>
             @empty

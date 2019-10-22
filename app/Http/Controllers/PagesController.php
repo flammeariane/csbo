@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class PagesController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,7 +25,7 @@ class UserController extends Controller
     {
         $events = user()->events();
 
-        return view('pages.users.events', compact('events'));
+        return view('pages.events', compact('events'));
     }
 
     /**
@@ -37,8 +37,18 @@ class UserController extends Controller
     {
         $outfits = user()->outfits();
 
-        return view('pages.users.outfits', compact('outfits'));
+        return view('pages.outfits', compact('outfits'));
     }
 
-    public function account(Request $request) {}
+    /**
+     * Display my account
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function me() 
+    {
+        $user = user();
+
+        return view('pages.account', compact('user'));
+    }
 }
