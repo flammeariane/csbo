@@ -1,4 +1,4 @@
-@extends('layouts.wrapper', [ 'title' => __('Login') ])
+@extends('layouts.wrapper', [ 'title' => 'C.S Braine-Ottignies' ])
 
 @section('content')
 <div class="container">
