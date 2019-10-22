@@ -5,7 +5,7 @@
 
     @if (session('status'))
         <div class="row">
-            <div class="col-12">
+            <div class="col-10 justify-content-center">
                 @alert(['type' => 'success'])
                     {{ session('status') }}
                 @endalert

@@ -13,8 +13,10 @@
                 </div>
                 <div class="card-footer">
                     <div class="float-left">
-                        <button type="button" class="btn btn border-primary"> <a href="mailto:demo@example.com?subject=Proposition - {{ $event->titre }} ({{ $event->dateDebut->format('d/m/Y H:i') }}) - {{ auth()->user()->fullName }}&body=">{{ __('Je me propose') }}</a> </button>
                         <a href="{{ route('events.index') }}" class="btn btn-primary">{{ __('Return back') }}</a>
+                    </div>
+                    <div class="float-right">
+                        <a class="btn btn-success" href="mailto:{{ env('EVENT_PROPOSE_MAIL_TO') }}?subject=Proposition - {{ $event->titre }} ({{ $event->dateDebut->format('d/m/Y H:i') }}) - {{ auth()->user()->fullName }} ({{ auth()->user()->id }})&body=Proposition de candidature concernant l'événement: {{ $event->titre }}, le {{ $event->dateDebut->format('d/m/y h:m') }}">{{ __('I propose to') }}</a>
                     </div>
                 </div>
             </div>
