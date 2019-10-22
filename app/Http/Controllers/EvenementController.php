@@ -30,6 +30,11 @@ class EvenementController extends Controller
         $events = Evenement::all();
         $calendar = Calendar::addEvents($events)->setOptions([
             'locale' => config('app.locale'),
+            'header' => [
+                'left' => 'prev,next',
+                'center' => 'title',
+                'right' => null
+            ],
             'views' => [
                 'month' => [
                     'timeFormat' => (config('app.locale') === 'fr' ? 'H:mm' : null)
