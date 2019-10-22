@@ -25,7 +25,7 @@ class PagesController extends Controller
     {
         $events = user()->events();
 
-        return view('pages.users.events', compact('events'));
+        return view('pages.events', compact('events'));
     }
 
     /**
@@ -37,6 +37,6 @@ class PagesController extends Controller
     {
         $outfits = user()->outfits();
 
-        return view('pages.users.outfits', compact('outfits'));
+        return view('pages.outfits', compact('outfits'));
     }
 }
