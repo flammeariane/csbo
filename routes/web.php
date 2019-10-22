@@ -17,8 +17,7 @@ Route::redirect('/', url('login'));
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/events', 'EvenementController')->only(['index', 'show']);
 
-Route::group(['prefix' => 'user'], function () {
-    Route::get('events', 'UserController@events')->name('user.events');
-    Route::get('outfits', 'UserController@outfits')->name('user.outfits');
-    Route::get('account', 'UserController@account')->name('user.account');
+Route::group(['prefix' => 'me'], function () {
+    Route::get('events', 'PagesController@events')->name('pages.events');
+    Route::get('outfits', 'PagesController@outfits')->name('pages.outfits');
 });
