@@ -11,7 +11,11 @@
                     <b>{{ __('Firstname') }}:</b> {{ $user->prenom }} <br />
                     <b>{{ __('E-Mail Address') }}:</b> {{ $user->email }} <br />
                     <b>{{ __('Phone') }}:</b> {{ $user->gsm ??  __('Undefined') }} <br />
-                    <b>{{ __('Birthday') }}:</b> {{ $user->dateNaissance->format('d/m/y') ??  __('Undefined') }} <br />
+                    
+                    @isset($user->dateNaissance)
+                        <b>{{ __('Birthday') }}:</b> {{ $user->dateNaissance->format('d/m/y') ??  __('Undefined') }} <br />
+                    @endisset
+                    
                     <b>{{ __('Address') }}:</b> {{ $user->addresse ?? __('Undefined') }} <br />
                     <b>{{ __('Registration number') }}:</b> {{ $user->nLegitimation }}
                 </div>
